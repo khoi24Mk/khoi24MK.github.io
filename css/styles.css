@@ -119,7 +119,7 @@ body{
 }
 
 .day_left{
-    color:--soft_blue;
+    color:var(--soft_blue);
 }
 
 .card_price .day_left{
