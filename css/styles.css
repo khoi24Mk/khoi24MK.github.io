@@ -1,0 +1,168 @@
+/*_______________________________*\
+    - VARIABLE
+\*_______________________________*/
+:root{
+    --main_BG:hsl(217, 54%, 11%);
+    --card_BG:hsl(216, 50%, 16%);
+    --line:hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --soft_blue:hsl(215, 51%, 70%);
+    --cyan:hsl(178, 100%, 50%);
+}
+
+
+/*_______________________________*\
+    - RESET
+\*_______________________________*/
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    
+    
+}
+html{
+    font-family: 'Outfit', sans-serif
+
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: var(--main_BG);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+    min-height: 100vh;
+}
+
+
+.card{
+    background-color: var(--card_BG);
+    border-radius:10px;
+    padding:25px;
+    max-width: 350px;
+
+    box-shadow: 0 15px 20px 30px rgba(0, 0, 0, 0.05),
+    0 20px 25px 40px rgba(0, 0, 0, 0.1);
+  
+}
+
+.card_head{
+
+}
+
+
+
+.card_img{
+    cursor:pointer;
+    overflow:hidden;
+    position:relative;
+}
+.card_img::after{
+    --sensor:hsla(178, 100%, 50%,0.5);
+    content: url(/images/icon-view.svg);
+    background-color: var(--sensor);
+    position: absolute;
+    inset:0;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    opacity: 0;
+    transition: all 0.25 ease;
+
+
+    
+}
+.card_img:hover::after{
+    opacity: 1;
+}
+
+.card_img img{
+    width:100%;
+}
+
+.card_title{
+    color:var(--white);
+    font-weight: 500;
+    font-size: 25px;
+    margin:10px 0;
+}
+
+.card_title:hover{
+    color:var(--cyan);
+    
+    
+}
+
+.card_info{
+    font-weight:300;
+    margin:10px 0;
+    color:var(--soft_blue);
+    font-size: 19px;
+}
+
+.more_info{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding:10px 0;
+    margin-bottom:10px;
+}
+
+
+
+.card_price{
+    color:var(--cyan);
+    font-weight:500;
+}
+
+.day_left{
+    color:--soft_blue;
+}
+
+.card_price .day_left{
+    display:flex;
+    align-items:center;
+
+}
+
+.footer{
+    display:flex;
+    align-items:center;
+    margin-bottom:1px;
+
+}
+
+.author_img{
+    width:50px;
+    border:1px solid var(--white);
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.author_name{
+    color: var(--soft_blue);
+    font-weight: 500;
+}
+
+.author_name a{
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+.author_name a:hover{
+    color:var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
